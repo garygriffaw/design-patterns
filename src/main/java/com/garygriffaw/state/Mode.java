@@ -1,7 +1,7 @@
 package com.garygriffaw.state;
 
 //State
-public interface TravelMode {
+public interface Mode {
     int getEta();
     int getDirection();
 }

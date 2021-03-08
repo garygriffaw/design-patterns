@@ -10,7 +10,7 @@ class StateIT {
     void bicyclingMode() {
         var directionService = new DirectionService();
 
-        directionService.setTravelMode(new BicyclingMode());
+        directionService.setMode(new BicyclingMode());
 
         assertEquals(2, directionService.getEta());
         assertEquals(20, directionService.getDirection());
@@ -20,7 +20,7 @@ class StateIT {
     void drivingMode() {
         var directionService = new DirectionService();
 
-        directionService.setTravelMode(new DrivingMode());
+        directionService.setMode(new DrivingMode());
 
         assertEquals(1, directionService.getEta());
         assertEquals(10, directionService.getDirection());
@@ -30,7 +30,7 @@ class StateIT {
     void transitMode() {
         var directionService = new DirectionService();
 
-        directionService.setTravelMode(new TransitMode());
+        directionService.setMode(new TransitMode());
 
         assertEquals(3, directionService.getEta());
         assertEquals(30, directionService.getDirection());
@@ -40,7 +40,7 @@ class StateIT {
     void walkingMode() {
         var directionService = new DirectionService();
 
-        directionService.setTravelMode(new WalkingMode());
+        directionService.setMode(new WalkingMode());
 
         assertEquals(4, directionService.getEta());
         assertEquals(40, directionService.getDirection());

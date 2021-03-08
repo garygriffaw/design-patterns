@@ -2,21 +2,21 @@ package com.garygriffaw.state;
 
 //Context
 public class DirectionService {
-    private TravelMode travelMode;
+    private Mode mode;
 
     public int getEta() {
-        return travelMode.getEta();
+        return mode.getEta();
     }
 
     public int getDirection() {
-        return travelMode.getDirection();
+        return mode.getDirection();
     }
 
-    public TravelMode getTravelMode() {
-        return travelMode;
+    public Mode getTravelMode() {
+        return mode;
     }
 
-    public void setTravelMode(TravelMode travelMode) {
-        this.travelMode = travelMode;
+    public void setMode(Mode mode) {
+        this.mode = mode;
     }
 }

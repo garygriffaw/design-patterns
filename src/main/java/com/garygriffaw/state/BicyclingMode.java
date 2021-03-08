@@ -1,7 +1,7 @@
 package com.garygriffaw.state;
 
 //ConcreteState
-public class BicyclingMode implements TravelMode {
+public class BicyclingMode implements Mode {
     @Override
     public int getEta() {
         System.out.println("Calculating ETA (bicycling)");
