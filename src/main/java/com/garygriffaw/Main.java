@@ -6,22 +6,18 @@ import com.garygriffaw.iterator.ProductCollection;
 import com.garygriffaw.state.DirectionService;
 import com.garygriffaw.state.DrivingMode;
 import com.garygriffaw.state.WalkingMode;
+import com.garygriffaw.strategy.AesEncryption;
+import com.garygriffaw.strategy.ChatClient;
+import com.garygriffaw.strategy.DesEncryption;
 
 public class Main {
 
     public static void main(String[] args) {
-        var productCollection = new ProductCollection();
-        productCollection.add(new Product(1, "desktop computer"));
-        productCollection.add(new Product(2, "laptop computer"));
-        productCollection.add(new Product(3, "mouse"));
+        var chatClient = new ChatClient(new DesEncryption());
+        chatClient.send("This is a test");
 
-        Iterator<Product> iterator =productCollection.createIterator();
-        while(iterator.hasNext()) {
-            var product = iterator.current();
-            System.out.println(product);
-            iterator.next();
-        }
-
+        chatClient = new ChatClient(new AesEncryption());
+        chatClient.send("Another test");
     }
 
 }
